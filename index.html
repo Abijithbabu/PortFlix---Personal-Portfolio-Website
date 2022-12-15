@@ -9,7 +9,7 @@
     <title> PortFlix - Personal Portfolio Website </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -201,9 +201,9 @@
         <span>Connect With Us</span>
     </div>
     <div class="contact-form">
-        <form id="submit-form" action="https://script.google.com/macros/s/AKfycbwzjj_52ORk9ilMfCEC12PJ2VNPmoej1BIEYxqiSRTY_b_yyrN2AFPQvspvQxmRnNHFwQ/exec" method="post" >
-            <input type="text" placeholder="Your Name" name="name" id="name">
-            <input type="email" name="email" id="email" placeholder="Your Email">
+        <form id="submit-form" action=""  >
+            <input type="text" placeholder="Your Name" name="name" id="name" required>
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
             <input type="submit" value="submit" class="contact-button">
         </form>
      </div>
@@ -228,7 +228,7 @@
               $("#submit-form").submit((e)=>{
                   e.preventDefault()
                   $.ajax({
-                      url:"https://script.google.com/macros/s/AKfycbyIHWyr5unf66LUYtUhNwy2We4uc3b8El5IyfYUA-1EtnJ83fJ_GlE4pn0kJUrwQF9O/exec",
+                      url:"https://script.google.com/macros/s/AKfycbwzjj_52ORk9ilMfCEC12PJ2VNPmoej1BIEYxqiSRTY_b_yyrN2AFPQvspvQxmRnNHFwQ/exec",
                       data:$("#submit-form").serialize(),
                       method:"post",
                       success:function (response){
@@ -244,6 +244,6 @@
               })
           </script>
           <script src="valid.js"></script>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          
 </body>
 </html>
