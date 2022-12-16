@@ -23,4 +23,4 @@ function valid(x){
         x.message.focus();
         return false;
     }
-}
+}// https://script.google.com/macros/s/AKfycbwzjj_52ORk9ilMfCEC12PJ2VNPmoej1BIEYxqiSRTY_b_yyrN2AFPQvspvQxmRnNHFwQ/exec
