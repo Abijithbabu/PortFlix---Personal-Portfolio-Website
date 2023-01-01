@@ -6,7 +6,12 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("shadow", window.scrollY > 0);
 });
 
-
+menu.onclick = () => {
+  navbar.classList.toggle("active");
+};
+window.onscroll = () => {
+  navbar.classList.remove("active");
+};
 
 let darkmode = document.querySelector("#darkmode");
 
@@ -18,4 +23,6 @@ darkmode.onclick = () => {
     darkmode.classList.replace("bx-sun", "bx-moon");
     document.body.classList.remove("active");
   }
-};   
+};
+
+                                    
