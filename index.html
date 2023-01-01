@@ -208,11 +208,14 @@
         <span>Connect With Us</span>
     </div>
     <div class="contact-form">
-        <form id="submit-form" action=""  >
-            <input type="text" placeholder="Your Name" name="name" id="name" required>
-            <input type="email" name="email" id="email" placeholder="Your Email" required>
-            <input type="text" name="message" id="message" placeholder="Write your message here" required>
-            <input type="submit" value="submit" class="contact-button">
+        <form id="submit-form" action="" name="f" >
+            <input type="text" placeholder="Your Name" name="name" id="name" onkeyup="validateName()">
+            <p id="errName"></p>
+            <input type="text" name="email" id="email" placeholder="Your Email" onkeyup="validateEmail()">
+            <p id="errEmail"></p>
+            <input type="text" name="message" id="message" placeholder="Write your message here" onkeyup="validateMsg()">
+            <p id="errMsg"></p>
+            <input type="submit" value="submit" class="contact-button" onclick="validateName(); validateEmail(); validateMsg();">
         </form>
      </div>
      </section>
@@ -226,32 +229,9 @@
         </div>                            
           <div class="copyright">
             © Portfolio | All Right Reserved.</p>
-          </div> <!-- Bootstrap core JS-->
-          
-          
-          <script src="scripts.js"></script>
-         
-          <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-          <script>
-              $("#submit-form").submit((e)=>{
-                  e.preventDefault()
-                  $.ajax({
-                      url:"https://script.google.com/macros/s/AKfycbwzjj_52ORk9ilMfCEC12PJ2VNPmoej1BIEYxqiSRTY_b_yyrN2AFPQvspvQxmRnNHFwQ/exec",
-                      data:$("#submit-form").serialize(),
-                      method:"post",
-                      success:function (response){
-                          alert("Form submitted successfully")
-                          window.location.reload()
-
-                      },
-                      error:function (err){
-                          alert("Something Error")
-          
-                      }
-                  })
-              })
-          </script>
-          <script src="valid.js"></script>
-          
+          </div> 
+     <script src="script.js"></script>
+     <script src="valid.js"></script>
+     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>
